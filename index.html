@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css" />
+<script>
+
+function setFocus() {
+	var iframe = document.getElementsByName("calendar");
+	iframe.contentWindow.focus();
+}
+
+
+</script>
+</head>
+
+<body onLoad="setFocus()">
+/*Foto Slider*/
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+</script>
+
+<iframe name="calendar" class="calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FBrussels&showTitle=0&showNav=0&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=YjNhODNlY2Y4N2E0ODg1NDg5OWRhNDk3OThhZGQ2NzJmZTQzM2MwMzA2NTM5YjJhMTQyZTQ3YzAyZjVkZTExYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E" style="border-width:0" width="90%" height="80%" frameborder="0" scrolling="no"></iframe>
+
+
+
+</body>
+</html>

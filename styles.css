@@ -1,0 +1,208 @@
+body{
+background-color: black;
+}
+
+/*Slideshow*/
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators 
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+*/
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*Calendar layout */
+
+.calendar{
+	background-color: black;
+	border: none;
+}
+
+.date-top{
+  font-size: 60px;
+  font-family: HelveticaNeue-Light,Helvetica,Arial,sans-serif;
+  text-align: left; 
+}
+
+.date-picker-on, .date-picker-off{
+  border: 0px;
+  padding: 1px;
+  width: 1200px;
+}
+
+.mv-event-container{
+  background-color: #FFF;
+  top: 25px;
+ }
+  
+.view-container-border{
+  background-color: #FFF;  
+}
+
+.view-cap{
+  background-color: #FFF;    
+}
+
+.st-bg, .st-bg-next, .st-bg-today{
+  border-left-width: 5px;
+  border-left-color: #FFF;
+  border-right-width: 0px;
+  border-left-style: solid;
+  background:url(https://raw.github.com/mmoustafa/Chalkboard/master/img/bg.png);
+}
+
+
+.mv-daynames-table{
+  background-color: #FFF;
+
+  line-height: 20px;
+
+}
+  
+.footer{
+   padding-top: 0px;
+
+}
+
+
+.mv-dayname{
+  color: #111;
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+
+
+.st-dtitle, .st-dtitle-next{
+  border-left-width: 5px;
+  border-top-width: 5px;
+  border-left-style: solid;
+  border-color: #FFF;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  color: #DDD;
+  background:url(https://raw.github.com/mmoustafa/Chalkboard/master/img/bg.png);
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.st-dtitle-nonmonth{
+  color: #888;
+}
+
+.st-dtitle-today{
+ border-color: #FFF; 
+ border-bottom-width: 0px;
+ border-right-width: 0px;
+ font-weight: bold;
+ text-decoration: underline;
+}
+.st-dtitle-down{
+  border-top-color: #FFF;
+}
+
+
+#dateMenuArrow1, .navSpacer, #calendarTabs1, .subscribe-image, .fe_forecast_link, .logo-plus-button{
+  display: none;
+}
+
+.rb-n{
+  background-color: black;
+  color: #FFF;
+  opacity: 0.9;
+  margin-left: 5px;
+  color: #FFF;
+}
+
+
+
+.te-t, .te-s{
+  color: #FFF;
+  opacity: 0.9;
+  padding-left: 5px;
+}
+
+.te-t{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*.st-wc{
+
+}*/
+
+
+
+/*Wheater*/
+
+.fe_location{
+  display: none;
+  border-bottom-width: 0px;
+}
+
+.fe_title{
+  display: none;
+  border-bottom-width: 0px;
+}
+
+.fe_container{
+  margin-left: -40px;
+}
