@@ -4,7 +4,7 @@ import uinput
 import os
 
 GPIO.setmode(GPIO.BCM)
-/*pin activeren*/
+#pin activeren
 GPIO.setup(19, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(20, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -16,15 +16,13 @@ device = uinput.Device([
 	uinput.KEY_M,
 	uinput.KEY_A,
 	uinput.KEY_W,
-	uinput.KEY_T,
-	uinput.KEY_Tab
-        ])
-/*maandoverzicht als standaard zetten*/
+	uinput.KEY_T        ])
+#maandoverzicht als standaard zetten
 view = 'm'
-device.emit_click(uinput.Key_Tab)
 
 while True:
-/*pins mappen - van links naar rechts (middelste knop is multi knop*/
+time.sleep(0.5)
+#pins mappen - van links naar rechts (middelste knop is multi knop
     input_state_back = GPIO.input(19)
     input_state_multi = GPIO.input(20)
     input_state_forward = GPIO.input(21)
@@ -51,10 +49,10 @@ while True:
 		end = time.time_ns()
 		multi_press_time = end-start
 		input_state_multi = GPIO.input(20)
-#
-#		if input_state_multi ==  True or multi_press_time > 5.5:
-#			print('Button press in', multi_press_time)
-#			break
+
+		if input_state_multi ==  True or multi_press_time > 5.5:
+			print('Button press in', multi_press_time)
+			break
 
 
 	if multi_press_time < 5:
@@ -84,5 +82,5 @@ while True:
 	os.system('sudo reboot')
 
     if input_state_forward == False and input_state_back == False:
- print ('refresh F5')
- device.emit_click(uinput.KEY_F5)
+ 	print ('refresh F5')
+	device.emit_click(uinput.KEY_F5)
