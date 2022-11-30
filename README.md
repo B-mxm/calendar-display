@@ -2,6 +2,9 @@
 calendar displayed on recycled laptop screen, rpi-koisk <br>
 RPI 3 B+<br>
 
+manual and files will be added soon.
+
+
    raspbian lite<br>
   kiosk mode based on this repo: https://gist.github.com/MvRens/cb9313984e8ef8b5cb9326fe19a281db<br>
   added: 
